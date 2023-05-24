@@ -22,7 +22,7 @@ function newItem(url, left, bottom) {
     weapon.style.left = left + 'px'
     weapon.style.bottom = bottom + 'px'
     document.body.appendChild(weapon)
-    weapon.addEventListener('click', function(){
+    weapon.addEventListener('dblclick', function(){
         weapon.remove()
     })
     return weapon
