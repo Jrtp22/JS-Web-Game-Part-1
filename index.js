@@ -5,10 +5,20 @@ function newImage(url, left, bottom) {
     dude.style.left = left + 'px'
     dude.style.bottom = bottom + 'px'
     document.body.appendChild(dude)
+    dude.addEventListener('click', function(){
+        dude.style.left = left + 10 + 'px'
+        dude.style.top = top + 20 + 'px'
+        dude.style.filter = 'invert(.9)'
+    })
+    dude.addEventListener('dblclick', function(){
+        dude.style.left = left + 'px'
+        dude.style.top = top + 'px'
+        dude.style.filter = 'invert(0)'
+    })
     return dude
 }
-newImage('assets/green-character.gif', '100', '100')
-newImage('assets/pine-tree.png', '450', '200')
+newImage('assets/green-character.gif', 100, 100)
+newImage('assets/pine-tree.png', 450, 200)
 
 newImage('assets/pillar.png', 350, 100)
 newImage('assets/tree.png ', 200, 300)
